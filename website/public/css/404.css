@@ -1,0 +1,41 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.text {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-div {
+    text-align: center;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+.btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}

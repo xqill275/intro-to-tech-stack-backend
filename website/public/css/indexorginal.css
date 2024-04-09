@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.NavBarContainer {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+}
+
+.NavBar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    background-color: #2980b9;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.NavBar a:hover {
+    background-color: #1c6ca6;
+}
+
+.MainContainer{
+    text-align: center;
+    padding: 20px;
+}
+
+.Main h1, .Main h2 {
+    color: #007BFF;
+}
+
+.ForLecturesForStudents {
+    background-color: #007BFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: white;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+.ForLectures, .ForStudents{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #004080;
+}
+
+.AcademicJourney, .StayConnected {
+    margin-bottom: 40px;
+}
+
+.SocialMedia a img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.SocialMedia a img:hover {
+    transform: scale(1.2);
+}
+
+.Testimonials {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.Testimonials h2, .Testimonials h3 {
+    color: #007BFF;
+}
+
+#testimonialText {
+    color: #333;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.NavBarContainer {
+    background-color: #007BFF;
+    padding: 10px;
+    text-align: center;
+}
+
+.NavBar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    background-color: #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.NavBar a:hover {
+    background-color: #004080;
+}
+
+.MainContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+.Main h1, .Main h3 {
+    color: #007BFF;
+}
+
+.ForLecturesForStudents {
+    background-color: #007BFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: white;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+.ForLectures, .ForStudents {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.AcademicJourney, .StayConnected {
+    margin-bottom: 40px;
+}
+
+.SocialMedia a img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.SocialMedia a img:hover {
+    transform: scale(1.2);
+}
+
+.Testimonials {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.Testimonials h2, .Testimonials h3 {
+    color: #007BFF;
+}
+
+p#testimonialText {
+    color: #333;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.Footer a {
+    color: #007BFF;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.Footer a:hover {
+    color: #004080;
+}

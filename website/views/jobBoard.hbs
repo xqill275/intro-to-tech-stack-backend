@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Job Board</h1>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search for a job..." id="jobSearch">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="searchJobs()">Search</button>
+        </div>
+    </div>
+    {{#if isLecturer}}
+        <button class="btn btn-primary mb-4" onclick="JobSwitch()" style="display: none" id="createJob">Create Job</button>
+    {{/if}}
+    <div class="createJob">
+        <form style="display: none;">
+            <div class="form-group">
+                <label for="jobTitle">Job Title</label>
+                <input type="text" class="form-control" id="jobTitle" placeholder="Enter job title">
+            </div>
+            <div class="form-group">
+                <label for="jobDescription">Job Description</label>
+                <textarea class="form-control" id="jobDescription" rows="3" placeholder="Enter job description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="jobPay">Job Pay</label>
+                <input type="text" class="form-control" id="jobPay" placeholder="Enter job pay">
+            </div>
+            <div class="form-group">
+                <label for="jobLocation">Job Location</label>
+                <input type="text" class="form-control" id="jobLocation" placeholder="Enter job location">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="createJob()">Create Job</button>
+        </form>
+    </div>
+    <a href="/"><button class="btn btn-primary mb-4">home</button></a>
+</div>
+<div class="container" id="jobList">
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch('/jobs/getJobs', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            if (data.length > 0) {
+                const campaignsContainer = document.getElementById('jobList');
+                data.forEach(job => {
+                    const jobCard = document.createElement('div');
+                    jobCard.className = 'card mb-4';
+                    jobCard.innerHTML = `
+                        <div class="card-body">
+                            <h5 class="card-title">${job.jobTitle}</h5>
+                            <p class="card-text">${job.jobDescription}</p>
+                            <p class="card-text">Pay: $${job.jobPay}</p>
+                            <p class="card-text">Location: ${job.jobLocation}</p>
+                            <button class="btn btn-primary" onclick="applyJob('${job._id}')">Apply</button>
+                        </div>
+                    `;
+                    campaignsContainer.appendChild(jobCard);
+                });
+            } else {
+                const jobList = document.getElementById('jobList');
+                jobList.innerHTML = '<h3>No jobs found</h3>';
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    });
+    {{#if isLecturer}}
+        document.getElementById('createJob').style.display = 'block';
+    {{/if}}
+</script>
+<script src="./javaScript/jobSearch.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
